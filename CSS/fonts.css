@@ -1,0 +1,24 @@
+/* fonts */
+@font-face {
+    font-family: inter;
+    src: url(/FONTS/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: AbhayaLibre;
+    src: url(/FONTS/AbhayaLibre-SemiBold.ttf);
+}
+@font-face {
+    font-family: Jakarta;
+    src: url(/FONTS/PlusJakartaSans-VariableFont_wght.ttf);
+}@font-face {
+    font-family: Poppins-Bold;
+    src: url(/FONTS/Poppins-Bold.ttf);
+}@font-face {
+    font-family: Roboto;
+    src: url(/FONTS/Roboto-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: PoltawskiNowy;
+    src: url(/FONTS/PoltawskiNowy-VariableFont_wght.ttf);
+}
