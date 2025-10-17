@@ -137,7 +137,10 @@ header {
     padding: 0;
     list-style: none;
 }
-
+.pagesLinks li:hover{
+    
+font-weight: bold;
+}
 .pagesLinks li {
     margin: 0 20px;
 }
@@ -174,8 +177,10 @@ header {
     font-family: AbhayaLibre;
     gap: 134px;
     flex-wrap: wrap;
-
+    position: relative;
 }
+
+
 
 .footer-title {
     padding-bottom: 30px;
@@ -192,14 +197,17 @@ header {
     padding-bottom: 13px;
 }
 
+
+
 .footer-line {
     width: 70%;
-    height: 2px;
+    height: 1px;
     background-color: white;
     border: none;
     margin:  0 auto;
     display: block;
 }
+
 
 .footer-bottom {
     background-color: black;
@@ -240,4 +248,10 @@ header {
     height: 50px;
     padding-left: 20px;
     font-family: AbhayaLibre;
+}
+img {
+  user-drag: none;         
+  -webkit-user-drag: none; 
+  user-select: none;       
+  pointer-events: none;  
 }

@@ -1,0 +1,84 @@
+.about-text{
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width:644px;
+    height:773px ;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 65px;
+    box-shadow: 8px 10px 25px rgba(0, 0, 0, 0.25);
+
+}
+.about-Section1{
+    display: flex;
+    justify-content: space-around;
+    gap: 1px;
+    margin-top: 73px;
+    
+
+
+}
+.about-text h2{
+    font-size: 64px;
+    font-family:Poppins-SemiBold ;
+}
+.about-text h3{
+    font-size: 39px;
+    font-family:Poppins ;
+    align-self: flex-start;
+}
+.about-text p{
+    font-size: 32px;
+    font-family:Poppins-Light ;
+    
+}
+.about-text h4{
+    font-family:Poppins-SemiBold;
+    font-size: 32px;
+    color: white;
+    background-color: black;
+    height: 63px;
+    width: 211px;
+    text-align: center;
+    cursor:pointer;
+    border-radius: 22px;
+}
+.about-img{
+    
+    background-image: url(/IMAGES/planet\ background.jpg);
+    border-radius: 60px;
+    width: 620px;
+    height: 773px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.logo-community{
+    display: flex;
+    padding-top: 51px ;
+    padding-bottom: 51px ;
+    margin-left: 10%;
+}
+.Team-Members{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+    margin-left: 5%;
+    margin-right: 5% ;
+}
+.Members{
+    display: flex;
+    flex-direction: column;
+}
+.Members h3{
+    padding: 23px;
+    font-weight:bold ;
+    font-size: 32px;
+    font-family: Cormorant;
+    padding-bottom: 52px;
+}

@@ -1,0 +1,188 @@
+.contact-left {
+    background-image: url(/IMAGES/contact\ us\ background.png);
+    width: 491px;
+    height: 647px;
+    border: radius 10px;
+    align-self: center;
+    padding: 30px;
+    padding-left: 37px;
+}
+
+.contact-container {
+    width: 1196px;
+    height: 667px;
+    background-color: white;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0 0 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    border-radius: 10px;
+    justify-content: flex-start;
+    margin: 0 auto;
+    
+    padding-left: 13px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#top h1 {
+    font-family: Poppins-SemiBold;
+    font: size 36px;
+    ;
+
+}
+
+#top h3 {
+    font-size: 18px;
+    font-family: Poppins;
+
+}
+
+#center h3 {
+    padding-left: 23px;
+
+}
+
+#last h3 {
+    padding-left: 23px;
+
+}
+
+#center {
+    display: flex;
+    color: white;
+    font-family: Poppins;
+    font-size: 16px;
+
+    padding-top: 80px;
+    align-items: center;
+
+}
+
+#last {
+    display: flex;
+    color: white;
+    font-family: Poppins;
+    font-size: 16px;
+    padding-top: 40px;
+
+}
+
+.contact-right {
+    margin: 23px;
+    
+}
+.first-name{
+    display: flex;
+    flex-direction: column;
+    padding-right: 23px;
+    
+}
+.first-name input{
+
+    width: 278px;
+    height:auto ;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.last-name{
+    display: flex;
+    flex-direction: column;
+    
+}
+.last-name input{
+    
+    width: 278px;
+    height:auto ;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.top-inputs{
+
+display: flex;
+justify-content: flex-start;
+padding: 2px;
+font-family: Poppins-Medium;
+font-size: 15px;
+}
+.middle-inputs{
+display: flex;
+padding: 2px;
+font-family: Poppins-Medium;
+font-size: 15px;
+
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    padding-right: 23px;
+
+}
+.email input{
+
+    width: 278px;
+    height:auto ;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.number input{
+
+    width: 278px;
+    height:auto ;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.number{
+    display: flex;
+    flex-direction: column;
+
+}
+.message{
+    display: flex;
+    flex-direction: column;
+}
+.message textarea{
+    margin-top: 37px;
+
+    width: 595px;
+    height: 103px;
+    border: none;
+    border-bottom: 1px solid black;
+    resize: none;
+    
+}
+.message textarea::placeholder{
+    color: black;
+
+}
+.subject label{
+    font-family:Poppins-SemiBold;
+    font-size: 15px;
+    color: #011C2A;
+    
+}
+.subject {
+    font-family: Poppins-SemiBold;
+    font-size: 15px;
+    color: #011C2A;
+    margin-top: 20px;
+}
+.options{
+    font-family: Poppins;
+    font-weight: 12px;
+}
+.contact-right a {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: fit-content;
+  margin-left: 320px;
+  font-size: 12px;
+  
+}
