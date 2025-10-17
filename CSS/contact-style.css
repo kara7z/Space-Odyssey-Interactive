@@ -171,6 +171,7 @@ font-size: 15px;
     font-size: 15px;
     color: #011C2A;
     margin-top: 20px;
+    padding-left: 13px;
 }
 .options{
     font-family: Poppins;
@@ -178,11 +179,21 @@ font-size: 15px;
 }
 .contact-right a {
   background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  width: fit-content;
-  margin-left: 320px;
-  font-size: 12px;
-  
+    color: white;
+    width: 214px;
+    height: 54px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 54px; /* vertically centers text */
+    display: block;
+    float: right;       /* pushes button to the right */
+    margin-right: 20px; /* optional spacing from edge */
+    font-family: Poppins-Medium;
+}
+.button2{
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 23px;
 }
