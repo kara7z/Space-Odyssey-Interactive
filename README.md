@@ -35,5 +35,3 @@ Contact
 Formulaire de contact (nom, email, message).
 
 Liens vers les réseaux sociaux fictifs d’AstroTech Studio.
-
-Optionnel : intégration d’une carte ou lien externe.
