@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     padding: 10px 70px;
     height: 70px;
-    background: url(/IMAGES/hbackground.jpg);
+    background: url(IMAGES/hbackground.jpg);
     background-size: cover;
     background-position: center;
 
@@ -157,7 +157,7 @@ font-weight: bold;
 
 /* footer */
 .footer {
-    background-image: url(/IMAGES/hbackground.jpg);
+    background-image: url(IMAGES/hbackground.jpg);
 
     color: white;
     text-align: start;
@@ -250,7 +250,7 @@ font-weight: bold;
     font-family: AbhayaLibre;
 }
 img {
-  user-drag: none;         
+          
   -webkit-user-drag: none; 
   user-select: none;       
   pointer-events: none;  

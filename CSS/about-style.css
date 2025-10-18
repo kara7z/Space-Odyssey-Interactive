@@ -48,7 +48,7 @@
 }
 .about-img{
     
-    background-image: url(/IMAGES/planet\ background.jpg);
+    background-image: url(IMAGES/planet\ background.jpg);
     border-radius: 60px;
     width: 620px;
     height: 773px;
@@ -80,5 +80,6 @@
     font-weight:bold ;
     font-size: 32px;
     font-family: Cormorant;
+    
     padding-bottom: 52px;
 }
