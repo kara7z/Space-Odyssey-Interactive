@@ -6,47 +6,47 @@
 
 @font-face {
     font-family: AbhayaLibre;
-    src: url(FONTS/AbhayaLibre-SemiBold.ttf);
+    src: url(../FONTS/AbhayaLibre-SemiBold.ttf);
 }
 @font-face {
     font-family: Jakarta;
-    src: url(FONTS/PlusJakartaSans-VariableFont_wght.ttf);
+    src: url(../FONTS/PlusJakartaSans-VariableFont_wght.ttf);
 }@font-face {
     font-family: Poppins-Bold;
-    src: url(FONTS/Poppins-Bold.ttf);
+    src: url(../FONTS/Poppins-Bold.ttf);
 }@font-face {
     font-family: Roboto;
-    src: url(FONTS/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(../FONTS/Roboto-VariableFont_wdth\,wght.ttf);
 }
 @font-face {
     font-family: PoltawskiNowy;
-    src: url(FONTS/PoltawskiNowy-VariableFont_wght.ttf);
+    src: url(../FONTS/PoltawskiNowy-VariableFont_wght.ttf);
 }
 @font-face {
     font-family:Castoro;
-    src: url(FONTS/Castoro-Regular.ttf);
+    src: url(../FONTS/Castoro-Regular.ttf);
 }
 @font-face {
     font-family:Poppins;
-    src: url(FONTS/Poppins-Regular.ttf);
+    src: url(../FONTS/Poppins-Regular.ttf);
 }
 @font-face {
     font-family:Poppins-Light ;
-    src: url(FONTS/Poppins-Light.ttf);
+    src: url(../FONTS/Poppins-Light.ttf);
 }
 @font-face {
     font-family:Poppins-SemiBold ;
-    src: url(FONTS/Poppins-SemiBold.ttf);
+    src: url(../FONTS/Poppins-SemiBold.ttf);
 }
 @font-face {
     font-family:Poppins-Medium;
-    src: url(FONTS/Poppins-Medium.ttf);
+    src: url(../FONTS/Poppins-Medium.ttf);
 }
 @font-face {
     font-family: Cormorant;
-    src: url(FONTS/Cormorant-VariableFont_wght.ttf);
+    src: url(../FONTS/Cormorant-VariableFont_wght.ttf);
 }
 @font-face {
     font-family:Poppins-ExtraLight ;
-    src: url(FONTS/Poppins-ExtraLight.ttf);
+    src: url(../FONTS/Poppins-ExtraLight.ttf);
 }

@@ -1,5 +1,5 @@
 .boxslide{
-    background-image: url(IMAGES/earth\ background.jpg);
+    background-image: url(../IMAGES/earth\ background.jpg);
     background-position:center -120px;
     background-size:120%;
     background-repeat: no-repeat;
@@ -133,7 +133,7 @@
     flex-direction: column;
     border-radius: 24px;
     justify-content:space-between;
-    background-image: url(IMAGES/background\ text.jpg);
+    background-image: url(../IMAGES/background\ text.jpg);
     background-repeat: no-repeat;
     background-size:cover;
 
