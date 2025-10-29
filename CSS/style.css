@@ -38,13 +38,17 @@ header {
     outline: none;
     border: none;
     padding: 6px 20px;
+    width: 273px;
+    height: 36px;
     border-radius: 5px;
 }
 
 .header-content .form input::placeholder {
-    color: #B1B1B1;
-    font-size: 13px;
-    font-weight: 300;
+    
+    font-size: 16px;
+    font-family: Poppins-Light;
+    color: rgba(0, 0, 0, 0.816);
+    font-weight: lighter;
 }
 
 .header-content .form img {
@@ -98,6 +102,12 @@ header {
     cursor: pointer;
     padding-left: 20px;
     padding-right: 20px;
+}
+.Search-bar{
+    font-size: 16px;
+    font-family: Poppins-Light;
+    color: rgba(0, 0, 0, 0.816);
+    font-weight: lighter;
 }
 
 .navbar {

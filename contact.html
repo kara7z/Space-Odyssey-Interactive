@@ -18,7 +18,7 @@
         </div>
         <div class="header-content">
             <div class="form">
-                <input type="text" placeholder="Search">
+                <input type="search" id="Search-bar" placeholder="Search" maxlength="26">
                 <img src="IMAGES/scope.png" alt="">
             </div>
             <div class="language">
@@ -68,47 +68,62 @@
                 </div>
             </div>
             <div class="contact-right">
-                <div class="top-inputs">
-                    <div class="first-name">
-                        <label for="username">First Name</label>
-                        <input type="text" />
+                <div class="top-elements">
+                    <div class="top-inputs">
+                        <div class="first-name">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="f-name"required minlength="2" maxlength="20">
+                        </div>
+                        <div class="last-name">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="l-name" required minlength="2" maxlength="20">
+                        </div>
                     </div>
-                    <div class="last-name">
-                        <label for="username">Last Name</label>
-                        <input type="text" />
-                    </div>
-                </div>
-                <div class="middle-inputs">
-                    <div class="email">
-                        <label for="username">Email</label>
-                        <input type="text" />
-                    </div>
-                    <div class="number">
-                        <label for="username">Phone Number</label>
-                        <input type="text" />
+                    <div class="middle-inputs">
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <input type="email" id="-email" required minlength="6" maxlength="35">
+                        </div>
+
+                        <div class="number">
+                            <label for="Phone">Phone Number</label>
+                            <input type="tel" id="P-number" required minlength="8" maxlength="12">
+                        </div>
                     </div>
                 </div>
                 <div class="subject">
                     <label for="question">Select Subject?</label>
                     <div class="options">
-                        <input type="radio" name="question" id="" />
+                        <input type="radio" name="question" id="" >
                         <label for="">General Inquiry</label>
-                        <input type="radio" name="question" id="" />
+                        <input type="radio" name="question" id="">
                         <label for="">Pov</label>
-                        <input type="radio" name="question" id="" />
+                        <input type="radio" name="question" id="" >
                         <label for="">Review</label>
-                        <input type="radio" name="question" id="" />
+                        <input type="radio" name="question" id="" >
                         <label for="">Other</label>
                     </div>
                 </div>
-                <div class="message">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="" placeholder=" Write your message.."></textarea>
-                </div>
-                <div class="button2">
-                <a href="#">Send Message</a>
+                <div class="lower-body">
+                    <div class="message">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="" placeholder="Write your message.."></textarea>
+                    </div>
+                    <div class="button2">
+                        <input type="submit" value="Send Message">
 
+                    </div>
                 </div>
+            </div>
+        </div>
+        <div class="Message-Sent">
+            <div class="Upper-Content">
+                <h2>Message send successfully </h2>
+                <button>Done</button>
+            </div>
+            <div class="Lower-Content">
+                
+
             </div>
         </div>
     </main>

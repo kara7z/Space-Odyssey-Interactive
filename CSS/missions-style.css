@@ -79,6 +79,8 @@
     height: 109px;
     border: 1px solid black;
     border-radius: 26px;
+    background-color: white;
+
 
 
 }
@@ -138,12 +140,13 @@
     font-size: 27px;
     font-family: Poppins-ExtraLight;
     padding: 35px;
+    color: white;
 }
 
 .contt {
     display: flex;
     gap: 20px;
-    width: ;
+    
     height: 540px;
 
 }
@@ -264,4 +267,8 @@
     flex-direction: column;
     gap: 50px;
 
+}
+body{
+    
+    background-color: rgba(0, 0, 0, 0.573);
 }

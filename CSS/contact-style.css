@@ -17,10 +17,34 @@
     border-radius: 10px;
     justify-content: flex-start;
     margin: 0 auto;
-    
+
     padding-left: 13px;
     margin-top: 120px;
     margin-bottom: 60px;
+}
+
+.top-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+
+}
+
+#f-name {
+    height: 32px;
+}
+
+#l-name {
+    height: 32px;
+}
+
+#-email {
+    height: 32px;
+}
+
+#P-number {
+    height: 32px;
 }
 
 #top {
@@ -28,6 +52,41 @@
     flex-direction: column;
     color: white;
 }
+
+.top-elements input{
+    font-size: 16px;
+    font-family: Poppins-Light;
+    color: rgba(0, 0, 0, 0.816);
+    font-weight: lighter;
+}
+
+.lower-body textarea {
+    font-size: 14px;
+    font-family: Poppins-Light;
+    color: rgba(0, 0, 0, 0.816);
+    font-weight: lighter;
+}
+
+input[type="text"]:focus {
+    outline: none;
+
+}
+
+input[type="email"]:focus {
+    outline: none;
+
+}
+
+input[type="tel"]:focus {
+    outline: none;
+
+}
+
+textarea:focus {
+    outline: none;
+
+}
+
 
 #top h1 {
     font-family: Poppins-SemiBold;
@@ -73,127 +132,228 @@
 }
 
 .contact-right {
-    margin: 23px;
-    
-}
-.first-name{
+    padding: 4em 2em;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
-    padding-right: 23px;
-    
-}
-.first-name input{
-
-    width: 278px;
-    height:auto ;
-    border: none;
-    border-bottom: 1px solid grey;
-}
-.last-name{
-    display: flex;
-    flex-direction: column;
-    
-}
-.last-name input{
-    
-    width: 278px;
-    height:auto ;
-    border: none;
-    border-bottom: 1px solid grey;
+    align-items: center;
 }
 
-.top-inputs{
-
-display: flex;
-justify-content: flex-start;
-padding: 2px;
-font-family: Poppins-Medium;
-font-size: 15px;
-}
-.middle-inputs{
-display: flex;
-padding: 2px;
-font-family: Poppins-Medium;
-font-size: 15px;
-
-}
-.email{
+.first-name {
     display: flex;
     flex-direction: column;
     padding-right: 23px;
 
 }
-.email input{
+
+.first-name input {
 
     width: 278px;
-    height:auto ;
+    height: auto;
     border: none;
     border-bottom: 1px solid grey;
 }
-.number input{
 
-    width: 278px;
-    height:auto ;
-    border: none;
-    border-bottom: 1px solid grey;
-}
-.number{
+.last-name {
     display: flex;
     flex-direction: column;
 
 }
-.message{
+
+.last-name input {
+
+    width: 278px;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.top-inputs {
+
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px;
+    font-family: Poppins-Medium;
+    font-size: 15px;
+}
+
+.middle-inputs {
+    display: flex;
+    padding: 2px;
+    font-family: Poppins-Medium;
+    font-size: 15px;
+
+}
+
+.email {
     display: flex;
     flex-direction: column;
+    padding-right: 23px;
+
 }
-.message textarea{
-    margin-top: 37px;
+
+.email input {
+
+    width: 278px;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.number input {
+
+    width: 278px;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.number {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.message label {
+    padding: 22px 0;
+}
+
+.lower-body {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.message textarea {
 
     width: 595px;
-    height: 103px;
+    height: 54px;
     border: none;
     border-bottom: 1px solid black;
     resize: none;
-    
+
 }
-.message textarea::placeholder{
+
+.message textarea::placeholder {
     color: black;
 
 }
-.subject label{
-    font-family:Poppins-SemiBold;
+
+.subject label {
+    font-family: Poppins-SemiBold;
     font-size: 15px;
     color: #011C2A;
-    
+
 }
+
 .subject {
     font-family: Poppins-SemiBold;
     font-size: 15px;
     color: #011C2A;
-    margin-top: 20px;
-    padding-left: 13px;
+    margin: 40px 0px;
+
+    align-self: flex-start;
 }
-.options{
+
+.options {
     font-family: Poppins;
     font-weight: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
 }
-.contact-right a {
-  background-color: black;
+
+.options label {
+    padding: 20px 0;
+    padding-right: 22px;
+}
+
+.button2 input {
+    background-color: black;
     color: white;
     width: 214px;
     height: 54px;
     border-radius: 5px;
     font-size: 16px;
-    text-align: center;
-    line-height: 54px; /* vertically centers text */
-    display: block;
-    float: right;       /* pushes button to the right */
-    margin-right: 20px; /* optional spacing from edge */
+
+
     font-family: Poppins-Medium;
 }
-.button2{
-    display: flex;
-    justify-content: flex-end;
 
-    padding: 23px;
+input[type="radio"] {
+    accent-color: black;
+}
+
+.button2 {
+    display: flex;
+    align-self: flex-end;
+
+}
+.Message-Sent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Upper-Content{
+    display: flex;
+    flex-direction: column;
+    width: 755px;
+    height: 435px;
+    border-radius: 20px;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 64px;
+    padding: 54px;
+    font-family: Poppins;
+    background-color: white;
+    margin: 130px;
+}
+.Upper-Content h2{
+    width: 625px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    border-radius: 20px;
+    height:136px ;
+    background-color: black;
+    color: white;
+}
+.Upper-Content button{
+    font-size: 32px;
+    width: 200px;
+    height: 80px;
+    border-radius: 15px;
+    background-color: white;
+    cursor:pointer;
+    border: black 1px solid;
+    font-weight: lighter;
+   
+}
+.Upper-Content button:hover{
+  background-color: rgb(232, 232, 232);    /* darker shade */
+  transform: translateY(-2px);  /* subtle lift */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.Upper-Content button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+body {
+    background-color: rgba(0, 0, 0, 0.573);
+}
+#Search-bar{
+    font-size: 16px;
+    font-family: Poppins-Light;
+    color: rgba(0, 0, 0, 0.816);
+    font-weight: lighter;
 }
