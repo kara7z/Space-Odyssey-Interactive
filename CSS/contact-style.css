@@ -351,9 +351,3 @@ input[type="radio"] {
 body {
     background-color: rgba(0, 0, 0, 0.573);
 }
-#Search-bar{
-    font-size: 16px;
-    font-family: Poppins-Light;
-    color: rgba(0, 0, 0, 0.816);
-    font-weight: lighter;
-}
