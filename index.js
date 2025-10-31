@@ -1,3 +1,4 @@
+let favorites = [];
 let data = [
     {
         "id": 1,
@@ -91,34 +92,126 @@ let data = [
         "description": "Artemis I is an uncrewed mission testing the Space Launch System and Orion spacecraft. It paves the way for future human exploration of the Moon and beyond."
     }
 ]
-for (let i = 0; i < data.length; i++) {
-    document.getElementById("fist-row").innerHTML += `<div class="container">
-        <span class="missionstilte">
-            <h1>${data[i].name}</h1>
-            <hr id="UNDRELINE">
-        </span>
-        <div class="contt">
-            <div class="mission-img">
-                <img src="${data[i].image}">
-            </div>
-            <div class="d-text">
-                <div class="Box-Details">
-                    <h1>DETAILS:</h1>
-                    <p>Agency: ${data[i].agency}</p>
-                    <p>Launch Date: ${data[i].launchDate}</p>
-                    <p>Objective: ${data[i].objective}</p>
+// for (let i = 0; i < data.length; i++) {
+//     document.getElementById("fist-row").innerHTML += `<div class="container">
+//         <span class="missionstilte">
+//             <h1>${data[i].name}</h1>
+//             <hr id="UNDRELINE">
+//         </span>
+//         <div class="contt">
+//             <div class="mission-img">
+//                 <img src="${data[i].image}">
+//             </div>
+//             <div class="d-text">
+//                 <div class="Box-Details">
+//                     <h1>DETAILS:</h1>
+//                     <p>Agency: ${data[i].agency}</p>
+//                     <p>Launch Date: ${data[i].launchDate}</p>
+//                     <p>Objective: ${data[i].objective}</p>
 
-                </div>
-                <div class="Box-Description">
-                    <h1>DESCRIPTION:</h1>
-                    <p>${data[i].description}</p>
-                </div>
-            </div>
+//                 </div>
+//                 <div class="Box-Description">
+//                     <h1>DESCRIPTION:</h1>
+//                     <p>${data[i].description}</p>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="button-Explore">
+//             <button>EXPLORE</button>
+//             <button onclick="toggleFavorite(1)" id="favorite-button"><img src="IMAGES/love.png" alt="Favorite" id="fav-img"></button>
+
+//         </div>
+//     </div>`;
+// }
+// //favorite button fonciton
+// const emptyHeart = "IMAGES/love.png";
+// const filledHeart = "IMAGES/heart.png"; 
+
+// function toggleFavorite(itemId) {
+//   const img = document.getElementById('fav-img');
+//   const button = document.getElementById('favorite-button');
+
+//   const index = favorites.indexOf(itemId);
+
+//   if (index === -1) {
+//     // Not in favorites → Add it
+//     favorites.push(itemId);
+//     img.src = filledHeart;
+//     button.title = "Remove from favorites";
+//   } else {
+//     // Already in favorites → Remove it
+//     favorites.splice(index, 1);
+//     img.src = emptyHeart;
+//     button.title = "Add to favorites";
+//   }
+
+//   console.log("Favorites:", favorites); // For debugging
+// }
+
+const emptyHeart = "IMAGES/love.png";
+const filledHeart = "IMAGES/heart.png";
+
+// Render all missions
+const container = document.getElementById("fist-row");
+container.innerHTML = ""; // Clear first
+
+data.forEach(mission => {
+    container.innerHTML += `
+    <div class="container">
+      <span class="missionstilte">
+        <h1>${mission.name}</h1>
+        <hr id="UNDRELINE">
+      </span>
+      <div class="contt">
+        <div class="mission-img">
+          <img src="${mission.image}" alt="${mission.name}">
         </div>
-        <div class="button-Explore">
-            <button>EXPLORE</button>
+        <div class="d-text">
+          <div class="Box-Details">
+            <h1>DETAILS:</h1>
+            <p>Agency: ${mission.agency}</p>
+            <p>Launch Date: ${mission.launchDate}</p>
+            <p>Objective: ${mission.objective}</p>
+          </div>
+          <div class="Box-Description">
+            <h1>DESCRIPTION:</h1>
+            <p>${mission.description}</p>
+          </div>
         </div>
+      </div>
+      <div class="button-Explore">
+        <button>EXPLORE</button>
+        <button 
+          class="favorite-button" 
+          data-id="${mission.id}"
+          title="Add to favorites">
+          <img src="${emptyHeart}" alt="Favorite" class="fav-img">
+        </button>
+      </div>
     </div>`;
-}
+});
+document.getElementById("fist-row").addEventListener("click", function (e) {
+    // Check if the clicked element is a favorite button
+    const button = e.target.closest(".favorite-button");
+    if (!button) return;
 
+    const itemId = parseInt(button.dataset.id);
+    const img = button.querySelector(".fav-img");
 
+    const index = favorites.indexOf(itemId);
+
+    if (index === -1) {
+        // Add to favorites
+        favorites.push(itemId);
+        img.src = filledHeart;
+        button.title = "Remove from favorites";
+    } else {
+        // Remove from favorites
+        favorites.splice(index, 1);
+        img.src = emptyHeart;
+        button.title = "Add to favorites";
+    }
+
+    console.log("Favorites:", favorites);
+});
+//contact us

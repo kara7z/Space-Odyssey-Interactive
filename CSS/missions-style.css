@@ -146,7 +146,7 @@
 .contt {
     display: flex;
     gap: 20px;
-    
+
     height: 540px;
 
 }
@@ -197,7 +197,10 @@
     gap: 33px;
     flex-wrap: wrap;
 }
-
+.button-Explore {
+    display: flex;
+    gap: 23px;
+}
 .button-Explore button {
     width: 168px;
     height: 54px;
@@ -214,20 +217,88 @@
 
 }
 
+.Missions-content {
+    /* display: none; */
+}
+.favorite-button{
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .15s ease, opacity .15s ease;
+    -webkit-tap-highlight-color: transparent;
+    
+}
+
+.favorite-button:hover  { opacity: .8; transform: scale(.95); }
+.favorite-button:active { opacity: .7; transform: scale(.90); }
+
+
+.favorite-button:focus-visible {
+    outline: 3px solid rgba(0,123,255,.5);
+    outline-offset: 2px;
+}
+
+.fav-img {
+    display: block;
+    width: 23px;      
+    height: 23px;
+    pointer-events: none;   
+}
+
+#icon-burger {
+
+    background-color: none;
+    border: none;
+}
+
+.img-btn {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .15s ease, opacity .15s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.img-btn:hover  { opacity: .8; transform: scale(.95); }
+.img-btn:active { opacity: .7; transform: scale(.90); }
+
+
+.img-btn:focus-visible {
+    outline: 3px solid rgba(0,123,255,.5);
+    outline-offset: 2px;
+}
+
+.img-btn img {
+    display: block;
+    width: 23px;      
+    height: 23px;
+    pointer-events: none;   
+}
+
+.header-content button {
+    background-color: none;
+    color: none;
+    border: none;
+}
+
 .missionstilte {
     font-family: Poppins-Light;
     text-align: center;
     align-items: center;
-     display: inline-block;
+    display: inline-block;
     /* padding: 23px; */
 
 
 }
 
 #UNDRELINE {
-   width: 100%;             
+    width: 100%;
     height: 1px;
-    background-color: #000;  
+    background-color: #000;
     border: none;
     margin: 4px auto 0 auto;
 }
@@ -268,7 +339,8 @@
     gap: 50px;
 
 }
-body{
-    
+
+body {
+
     background-color: rgba(0, 0, 0, 0.573);
 }

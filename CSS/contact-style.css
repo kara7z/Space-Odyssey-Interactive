@@ -2,7 +2,7 @@
     background-image: url(../IMAGES/contact\ us\ background.png);
     width: 491px;
     height: 647px;
-    border: radius 10px;
+    border-radius: 10px;
     align-self: center;
     padding: 30px;
     padding-left: 37px;
@@ -90,8 +90,8 @@ textarea:focus {
 
 #top h1 {
     font-family: Poppins-SemiBold;
-    font: size 36px;
-    ;
+    font-size: 36px;
+    
 
 }
 
@@ -275,14 +275,25 @@ textarea:focus {
     padding-right: 22px;
 }
 
-.button2 input {
+.button2 button{
+    all: unset;
+    text-align: center;
     background-color: black;
     color: white;
     width: 214px;
     height: 54px;
     border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
+    /* display: inline-flex; */
 
+
+    font-family: Poppins-Medium;
+}
+.button2 button:focus{
+    /* font-size:17px; */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.699);
 
     font-family: Poppins-Medium;
 }
@@ -297,7 +308,7 @@ input[type="radio"] {
 
 }
 .Message-Sent{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -350,4 +361,71 @@ input[type="radio"] {
 }
 body {
     background-color: rgba(0, 0, 0, 0.573);
+}
+.input-control.success input {
+    border-bottom-color: green;
+}
+.input-control.success textarea {
+    border-bottom-color: green;
+}
+.input-control.success .options {
+    border-bottom: 1px solid green;
+    padding-bottom: 5px;
+}
+
+.input-control.error input {
+    border-bottom-color: red;
+}
+
+.input-control.error textarea {
+    border-bottom-color: red;
+}
+.input-control.error .options {
+    border-bottom: 1px solid red;
+    padding-bottom: 5px;
+}
+
+
+
+.input-control .error {
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+.input-control .error {
+    color: red;
+    font-size: 12px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    min-height: 16px;
+    height: auto;
+    margin-top: 5px;
+    padding-left: 2px;
+    display: block;
+}
+
+/* Red border under radio options on error */
+.input-control.error .options {
+    border-bottom: 2px solid red;
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+    transition: border-color 0.3s ease;
+}
+
+/* Green border on success */
+.input-control.success .options {
+    border-bottom: 2px solid green;
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+    transition: border-color 0.3s ease;
+}
+
+/* Optional: Shake animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+.input-control.error {
+    animation: shake 0.4s ease;
 }
