@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/fonts.css">
     <link rel="stylesheet" href="CSS/contact-style.css">
-    <script defer src="contact.js"></script>
 </head>
 
 <body>
@@ -50,94 +49,103 @@
     <main>
         <div class="contact-container">
             <div class="contact-left">
-                <div id="top">
-                    <div>
-                        <h1>Contact Us</h1>
-                    </div>
-                    <div>
-                        <h3>Say something to start a live chat!</h3>
-                    </div>
+                <div class="top-text">
+                    <h1>Contact Us</h1>
+                    <h2>Say something to start a live chat!</h2>
                 </div>
-                <div id="center">
-                    <img src="IMAGES/bxs_phone-call.png" alt="">
-                    <h3>+1012 3456 789</h3>
-                </div>
-                <div id="last">
-                    <img src="IMAGES/ic_sharp-email.png" alt="">
-                    <h3>demo@gmail.com</h3>
+                <div class="middle-text">
+                    <div class="Contact-Num">
+                        <img src="IMAGES/bxs_phone-call.png">
+                        <h3>+1012 3456 789</h3>
+                    </div>
+                    <div class="Contact-Email">
+                        <img src="IMAGES/ic_sharp-email.png">
+                        <h3>demo@gmail.com</h3>
+                    </div>
                 </div>
             </div>
             <div class="contact-right">
-                <form id="form" action="/" method="get">
-                    <div class="top-elements">
-                        <div class="top-inputs">
-                            <div class="first-name input-control">
-                                <label for="first-name">First Name</label>
-                                <input type="text" id="f-name" maxlength="20">
-                                <div class="error"></div>
+                <div>
+                    <form action="/" id="form" class="form" method="get">
+                        <div class="Text-boxs">
+                            <div class="Names">
+                                <div class="first-name  input-control">
+                                    <label for="">First Name</label>
+                                    <input type="text" id="f-name" maxlength="20">
+                                    <div class="error"></div>
+
+                                </div>
+                                <div class="last-name  input-control">
+                                    <label for="">Last Name</label>
+                                    <input type="text" id="l-name" maxlength="20">
+                                    <div class="error"></div>
+
+                                </div>
                             </div>
-                            <div class="last-name input-control">
-                                <label for="last-name">Last Name</label>
-                                <input type="text" id="l-name" maxlength="20">
-                                <div class="error"></div>
-                            </div>
-                        </div>
-                        <div class="middle-inputs">
-                            <div class="email input-control">
-                                <label for="email">Email</label>
-                                <input type="text" id="email" maxlength="35">
-                                <div class="error"></div>
+                            <div class="Personal">
+                                <div class="Email  input-control">
+                                    <label for="">Email</label>
+                                    <input type="text" id="email" maxlength="35">
+                                    <div class="error"></div>
+
+                                </div>
+                                <div class="Phone  input-control">
+                                    <label for="">Phone Number</label>
+                                    <input type="tel" id="P-number" maxlength="12">
+                                    <div class="error"></div>
+
+                                </div>
                             </div>
 
-                            <div class="number input-control">
-                                <label for="Phone">Phone Number</label>
-                                <input type="tel" id="P-number" maxlength="12">
+                            <div class="Options">
+                                <label for="">Select Subject?</label>
+                                <div class="radioss">
+                                    <input type="radio" id="general" name="Subject" value="General Inquiry" required>
+                                    <label for="General Inquiry">General Inquiry</label>
+                                    <input type="radio" id="pov" name="Subject" value="Pov">
+                                    <label for="Pov">Pov</label>
+                                    <input type="radio" id="review" name="Subject" value="Review">
+                                    <label for="Review">Review</label>
+                                    <input type="radio" id="other" name="Subject" value="Other">
+                                    <label for="Other">Other</label>
+                                </div>
+                            </div>
+                            <div class="Message-area input-control">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="textarea" placeholder="Write your message.."></textarea>
                                 <div class="error"></div>
+
+                            </div>
+                            <div class="button-Send">
+                                <button type="submit" id="submit-button">Send Message</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="subject input-control">
-                        <label for="question">Select Subject?</label>
-                        <div class="options">
-                            <input type="radio" name="subject" id="general" value="general">
-                            <label for="general">General Inquiry</label>
 
-                            <input type="radio" name="subject" id="pov" value="pov">
-                            <label for="pov">Pov</label>
+                    </form>
+                </div>
 
-                            <input type="radio" name="subject" id="review" value="review">
-                            <label for="review">Review</label>
-
-                            <input type="radio" name="subject" id="other" value="other">
-                            <label for="other">Other</label>
-                        </div>
-                            <!-- <div class="error"></div> -->
-                        
-                    </div>
-                    <div class="lower-body">
-                        <div class="message input-control">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="textarea" placeholder="Write your message.."
-                                maxlength="300"></textarea>
-                            <div class="error"></div>
-                        </div>
-                        <div class="button2">
-                            <button type="submit" id="submit-button">Send Message</button>
-                        </div>
-                    </div>
-                </form>
             </div>
+
+
+
+
+
+
         </div>
         <div class="Message-Sent">
             <div class="Upper-Content">
                 <h2>Message send successfully </h2>
                 <button id="done-button">Done</button>
             </div>
-            <div class="Lower-Content">
-
-
-            </div>
+            <div class="Lower-Content"></div>
         </div>
+
+
+
+
+
+
+
     </main>
 
     <!-- footer -->
@@ -191,6 +199,7 @@
         </div>
 
     </footer>
+    <script defer src="contact.js"></script>
 </body>
 
 </html>

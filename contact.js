@@ -1,119 +1,110 @@
-const form = document.getElementById('form');
-const fName = document.getElementById('f-name');
-const lName = document.getElementById('l-name');
-const email = document.getElementById('email');
-const textarea = document.getElementById('textarea');
-const phone = document.getElementById('P-number');
+const form          = document.getElementById('form');
+const fName         = document.getElementById('f-name');
+const lName         = document.getElementById('l-name');
+const email         = document.getElementById('email');
+const textareaEl    = document.getElementById('textarea');
+const phone         = document.getElementById('P-number');
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    validateInputs();
-});
+let contactBox;      // .contact-container
+let messageSent;     // .Message-Sent
+let doneButton;      // #done-button
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
+/* -------------------------------------------------
+   Helper functions
+   ------------------------------------------------- */
+const setError = (el, msg) => {
+    const ctrl = el.parentElement;
+    const err  = ctrl.querySelector('.error');
+    err.innerText = msg;
+    ctrl.classList.add('error');
+    ctrl.classList.remove('success');
 };
 
-const setSuccess = (element) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = "";
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+const setSuccess = (el) => {
+    const ctrl = el.parentElement;
+    const err  = ctrl.querySelector('.error');
+    err.innerText = '';
+    ctrl.classList.add('success');
+    ctrl.classList.remove('error');
 };
 
-const isValidEmail = (email) => {
+const isValidEmail = (val) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    return re.test(String(val).toLowerCase());
 };
 
-const isValidPhone = (phone) => {
-    const re = /^\d{8,12}$/;  // Only digits, 8-12 length
-    return re.test(phone);
-};
+const isValidPhone = (val) => /^\d{8,12}$/.test(val);
 
+/* -------------------------------------------------
+   Validation – returns true only if everything is OK
+   ------------------------------------------------- */
 const validateInputs = () => {
+    let ok = true;
 
-    let isValid = true;
+    const f = fName.value.trim(),
+          l = lName.value.trim(),
+          e = email.value.trim(),
+          m = textareaEl.value.trim(),
+          p = phone.value.trim();
 
-    const fNameValue = fName.value.trim();
-    const lNameValue = lName.value.trim();
-    const emailValue = email.value.trim();
-    const textareaValue = textarea.value.trim();
-    const phoneValue = phone.value.trim();
-    // const subjectSelected = document.querySelector('input[name="subject"]:checked');
-    // const subjectControl = document.querySelector('.subject');
+    // First name
+    if (!f) { setError(fName, 'First Name is required'); ok = false; }
+    else if (f.length <= 2) { setError(fName, 'First Name must be > 2 chars'); ok = false; }
+    else setSuccess(fName);
 
+    // Last name
+    if (!l) { setError(lName, 'Last Name is required'); ok = false; }
+    else if (l.length <= 2) { setError(lName, 'Last Name must be > 2 chars'); ok = false; }
+    else setSuccess(lName);
 
-    if (fNameValue === "") {
-        setError(fName, 'First Name is required');
-        isValid = false;
-    } else if (fNameValue.length <= 2) {
-        setError(fName, 'First Name must be more than 2 characters');
-        isValid = false;
-    } else {
-        setSuccess(fName);
-    }
+    // Email
+    if (!e) { setError(email, 'Email is required'); ok = false; }
+    else if (!isValidEmail(e)) { setError(email, 'Provide a valid email'); ok = false; }
+    else setSuccess(email);
 
-    if (lNameValue === "") {
-        setError(lName, 'Last Name is required');
-        isValid = false;
-    } else if (lNameValue.length <= 2) {
-        setError(lName, 'Last Name must be more than 2 characters');
-        isValid = false;
-    } else {
-        setSuccess(lName);
-    }
+    // Message
+    if (!m) { setError(textareaEl, 'Message is required'); ok = false; }
+    else setSuccess(textareaEl);
 
+    // Phone
+    if (!p) { setError(phone, 'Phone is required'); ok = false; }
+    else if (!isValidPhone(p)) { setError(phone, 'Phone: 8-12 digits only'); ok = false; }
+    else setSuccess(phone);
 
-    if (emailValue === "") {
-        setError(email, 'Email is required');
-        isValid = false;
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
-        isValid = false;
-    } else {
-        setSuccess(email);
-    }
-
-    if (textareaValue === "") {
-        setError(textarea, 'Message is required');
-        isValid = false;
-    } else {
-        setSuccess(textarea);
-    }
-
-    if (phoneValue === "") {
-        setError(phone, 'Phone is required');
-        isValid = false;
-    } else if (!isValidPhone(phoneValue)) {
-        setError(phone, 'Provide a valid phone number (8-12 digits)');
-        isValid = false;
-    } else {
-        setSuccess(phone);
-    }
-    // if (!subjectSelected) {
-    //     setError(subjectControl, 'Please select a subject');
-    //     isValid = false;
-    // } else {
-    //     setSuccess(subjectControl);
-    // }
-
-    if (isValid) {
-        messageSent.style.display = 'flex';
-        form.reset();
-        document.querySelectorAll('.input-control').forEach(control => {
-            control.classList.remove('success', 'error');
-        });
-    }
-
+    return ok;
 };
-doneButton.addEventListener('click', () => {
-    messageSent.style.display = 'none';
+
+/* -------------------------------------------------
+   DOM ready – grab the containers & attach events
+   ------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+    contactBox  = document.querySelector('.contact-container');
+    messageSent = document.querySelector('.Message-Sent');
+    doneButton  = document.getElementById('done-button');
+
+    /* ---- Form submit ---- */
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        if (validateInputs()) {
+            // 1. Hide the whole contact form
+            contactBox.style.display = 'none';
+
+            // 2. Show the success modal
+            messageSent.style.display = 'flex';
+
+            // 3. Reset everything
+            form.reset();
+            document.querySelectorAll('.input-control')
+                    .forEach(c => c.classList.remove('success', 'error'));
+        }
+    });
+
+    /* ---- Done button ---- */
+    doneButton.addEventListener('click', () => {
+        // 1. Hide modal
+        messageSent.style.display = 'none';
+        contactBox.style.display = 'flex';   
+        window.location.href = 'index.html';
+    });
 });
