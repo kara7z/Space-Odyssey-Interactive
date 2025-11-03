@@ -61,25 +61,21 @@
     font-weight: bold;
 }
 
+
+
 #Mission-title {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    padding: 72px;
-
-}
-
-#Mission-title h1 {
     box-shadow: 8px -10px 27px rgba(0, 0, 0, 0.25), 8px 10px 27px rgba(0, 0, 0, 0.25);
 
     font-family: Poppins-Light;
     font-weight: lighter;
     font-size: 64px;
-    width: 518px;
-    height: 109px;
-    border: 1px solid black;
-    border-radius: 26px;
-    background-color: white;
+    /* border: 1px solid black; */
+    color: white;
+    background-color: black;
+    border-bottom: white 2px solid;
+    border-top: white 2px solid;
+    border-bottom: none;
+    text-align: center;
 
 
 
@@ -197,10 +193,12 @@
     gap: 33px;
     flex-wrap: wrap;
 }
+
 .button-Explore {
     display: flex;
     gap: 23px;
 }
+
 .button-Explore button {
     width: 168px;
     height: 54px;
@@ -220,7 +218,8 @@
 .Missions-content {
     /* display: none; */
 }
-.favorite-button{
+
+.favorite-button {
     all: unset;
     cursor: pointer;
     display: inline-flex;
@@ -228,23 +227,30 @@
     justify-content: center;
     transition: transform .15s ease, opacity .15s ease;
     -webkit-tap-highlight-color: transparent;
-    
+
 }
 
-.favorite-button:hover  { opacity: .8; transform: scale(.95); }
-.favorite-button:active { opacity: .7; transform: scale(.90); }
+.favorite-button:hover {
+    opacity: .8;
+    transform: scale(.95);
+}
+
+.favorite-button:active {
+    opacity: .7;
+    transform: scale(.90);
+}
 
 
 .favorite-button:focus-visible {
-    outline: 3px solid rgba(0,123,255,.5);
+    outline: 3px solid rgba(0, 123, 255, .5);
     outline-offset: 2px;
 }
 
 .fav-img {
     display: block;
-    width: 23px;      
+    width: 23px;
     height: 23px;
-    pointer-events: none;   
+    pointer-events: none;
 }
 
 #icon-burger {
@@ -263,20 +269,27 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.img-btn:hover  { opacity: .8; transform: scale(.95); }
-.img-btn:active { opacity: .7; transform: scale(.90); }
+.img-btn:hover {
+    opacity: .8;
+    transform: scale(.95);
+}
+
+.img-btn:active {
+    opacity: .7;
+    transform: scale(.90);
+}
 
 
 .img-btn:focus-visible {
-    outline: 3px solid rgba(0,123,255,.5);
+    outline: 3px solid rgba(0, 123, 255, .5);
     outline-offset: 2px;
 }
 
 .img-btn img {
     display: block;
-    width: 23px;      
+    width: 23px;
     height: 23px;
-    pointer-events: none;   
+    pointer-events: none;
 }
 
 .header-content button {
@@ -344,13 +357,18 @@ body {
 
     background-color: rgba(0, 0, 0, 0.573);
 }
-.mission-card {          /* each rendered mission */
+
+.mission-card {
+    /* each rendered mission */
     margin-bottom: 2rem;
     /* any styling you already have for .container */
 }
-.mission-card[style*="display: none"] {   /* hidden cards */
+
+.mission-card[style*="display: none"] {
+    /* hidden cards */
     display: none !important;
 }
+
 .hamburger-btn {
     background: none;
     border: none;
@@ -360,12 +378,13 @@ body {
 
 .menu {
     position: absolute;
-    top: 60px; /* adjust based on your layout */
+    top: 60px;
+    /* adjust based on your layout */
     right: 20px;
     background: white;
     /* border: 1px solid #ccc; */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 180px;
     font-family: sans-serif;
     z-index: 1000;
@@ -390,54 +409,134 @@ body {
 
 .menu li:hover {
     background: black;
-    color:white;
+    color: white;
     border-radius: 10px;
     font-weight: bold;
 }
 
 .hidden {
     display: none !important;
-    
+
 }
+
 #overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
 }
 
 /* Popup boxes */
 .popup {
-  position: fixed;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 350px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
 }
 
-.popup input, .popup textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-family: Poppins;
+.popup input,
+.popup textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Poppins;
 }
 
 .popup button {
-  border: none;
-  border-radius: 8px;
-  padding: 10px;
-  cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .popup h2 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Nagbar {
+ background-color: black;
+display: grid;
+min-height: 80px;   
+grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+padding: 10px;
+gap: 12px;
+border-bottom: 2px solid white;
+border-top: 2px solid white;
+align-items: center;
+justify-content: center;
+
+}
+
+.Nagbar select {
+    background-color: white;
+    border: none;
+    border: 2px black solid;
+    border-radius: 12px;
+    font-family: Poppins;
+    outline: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+.Nagbar input {
+    background-color: white;
+    border: none;
+    border: 2px black solid;
+     font-family: Poppins;
+    outline: none;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 12px;
+
+}
+
+.Nagbar input::placeholder {
+    color: black;
+}
+
+.Nagbar option {
+
+    background-color: white;
+    border: none;
+    border: 2px black solid;
+    border-radius: 12px;
+    font-family: Poppins;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+
+}
+
+.filter {
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.616) 12px 2px 23px;
+}
+#yearFilter {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  font-family: Poppins;
+  font-size: 30px;
   text-align: center;
+  outline: none;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+#yearFilter::placeholder {
+  color: #888;
+  font-size: 24px;
 }

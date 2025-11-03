@@ -5,7 +5,7 @@ let data = [
         "name": "Apollo 11",
         "agency": "NASA",
         "objective": "Achieve the first crewed landing on the Moon.",
-        "launchDate": "1969-07-16",
+        "launchDate": "1969/07/16",
         "image": "IMAGES/appollo.jpg",
         "description": "Apollo 11 was the first mission to land humans on the Moon. Neil Armstrong and Buzz Aldrin walked its surface, marking a giant leap for mankind."
     },
@@ -14,7 +14,7 @@ let data = [
         "name": "Voyager 1",
         "agency": "NASA",
         "objective": "Explore the outer Solar System and interstellar space.",
-        "launchDate": "1977-09-05",
+        "launchDate": "1977/09/05",
         "image": "IMAGES/Voyager 1.jpg",
         "description": "Voyager 1 is the farthest human-made object from Earth. It explored the outer planets and now travels through interstellar space, carrying a message from humanity."
 
@@ -24,7 +24,7 @@ let data = [
         "name": "Hubble Space Telescope (HST)",
         "agency": "NASA / ESA",
         "objective": "Conduct high-resolution astronomy from Earth's orbit.",
-        "launchDate": "1990-04-24",
+        "launchDate": "1990/04/24",
         "image": "IMAGES/3. Hubble Space Telescope (HST).jpg",
         "description": "The Hubble Space Telescope orbits Earth, capturing stunning images of distant galaxies and nebulae. Its discoveries have deepened our understanding of the universe."
     },
@@ -33,7 +33,7 @@ let data = [
         "name": "Cassini–Huygens",
         "agency": "NASA / ESA / ASI",
         "objective": "Study Saturn, its rings, and its moons.",
-        "launchDate": "1997-10-15",
+        "launchDate": "1997/10/15",
         "image": "IMAGES/4. Cassini–Huygens.jpg",
         "description": "Cassini Huygens explored Saturn and its moons, revealing their beauty and complexity. The mission uncovered active moons and stunning rings before its final dive into the planet."
     },
@@ -42,7 +42,7 @@ let data = [
         "name": "Juno",
         "agency": "NASA",
         "objective": "Investigate Jupiter's origin and interior structure.",
-        "launchDate": "2011-08-05",
+        "launchDate": "2011/08/05",
         "image": "IMAGES/Juno.jpg",
         "description": "Juno orbits Jupiter to study its atmosphere, magnetic field, and deep structure. Its mission helps reveal how the giant planet — and our solar system — formed."
     },
@@ -51,7 +51,7 @@ let data = [
         "name": "Curiosity (MSL)",
         "agency": "NASA",
         "objective": "Search for evidence of past life conditions on Mars.",
-        "launchDate": "2011-11-26",
+        "launchDate": "2011/11/26",
         "image": "IMAGES/Curiosity.jpg",
         "description": "Curiosity explores the surface of Mars to study its climate, geology, and potential for past life. Its discoveries continue to shape our understanding of the Red Planet."
     },
@@ -60,7 +60,7 @@ let data = [
         "name": "James Webb Space Telescope (JWST)",
         "agency": "NASA / ESA / CSA",
         "objective": "Observe the first galaxies and exoplanets..",
-        "launchDate": "2021-12-25",
+        "launchDate": "2021/12/25",
         "image": "IMAGES/7. James Webb Space Telescope (JWST).jpg",
         "description": "The James Webb Space Telescope peers deep into space to observe the first galaxies and stars. Its advanced instruments reveal the origins and evolution of the universe."
     },
@@ -69,7 +69,7 @@ let data = [
         "name": "Perseverance (Mars 2020)",
         "agency": "NASA",
         "objective": "Collect rock samples on Mars for return to Earth.",
-        "launchDate": "2020-07-30",
+        "launchDate": "2020/07/30",
         "image": "IMAGES/9. Perseverance (Mars 2020).jpg",
         "description": "Perseverance explores Mars to search for signs of past life and collect samples. Its mission helps pave the way for future human exploration of the Red Planet."
     },
@@ -77,7 +77,7 @@ let data = [
         "id": 9,
         "name": "Lucy",
         "objective": "Explore the Trojan asteroids near Jupiter.",
-        "launchDate": "2021-10-16",
+        "launchDate": "2021/10/16",
         "image": "IMAGES/Lucy.webp",
         "agency": "NASA",
         "description": "Lucy is studying the Trojan asteroids that orbit near Jupiter. Its mission aims to understand the building blocks of the planets and the early history of our solar system."
@@ -87,77 +87,11 @@ let data = [
         "name": "Artemis I",
         "agency": "NASA",
         "objective": "Uncrewed test flight of the new Orion spacecraft to the Moon.",
-        "launchDate": "2022-11-16",
+        "launchDate": "2022/11/16",
         "image": "IMAGES/8. Artemis I.jpg",
         "description": "Artemis I is an uncrewed mission testing the Space Launch System and Orion spacecraft. It paves the way for future human exploration of the Moon and beyond."
     }
 ]
 
-
-const emptyHeart = "IMAGES/love.png";
-const filledHeart = "IMAGES/heart.png";
-
-// Render all missions
-const container = document.getElementById("fist-row");
-container.innerHTML = ""; 
-
-data.forEach(mission => {
-    container.innerHTML += `
-    <div class="container">
-      <span class="missionstilte">
-        <h1>${mission.name}</h1>
-        <hr id="UNDRELINE">
-      </span>
-      <div class="contt">
-        <div class="mission-img">
-          <img src="${mission.image}" alt="${mission.name}">
-        </div>
-        <div class="d-text">
-          <div class="Box-Details">
-            <h1>DETAILS:</h1>
-            <p>Agency: ${mission.agency}</p>
-            <p>Launch Date: ${mission.launchDate}</p>
-            <p>Objective: ${mission.objective}</p>
-          </div>
-          <div class="Box-Description">
-            <h1>DESCRIPTION:</h1>
-            <p>${mission.description}</p>
-          </div>
-        </div>
-      </div>
-      <div class="button-Explore">
-        <button>EXPLORE</button>
-        <button 
-          class="favorite-button" 
-          data-id="${mission.id}"
-          title="Add to favorites">
-          <img src="${emptyHeart}" alt="Favorite" class="fav-img">
-        </button>
-      </div>
-    </div>`;
-});
-document.getElementById("fist-row").addEventListener("click", function (e) {
-    const button = e.target.closest(".favorite-button");
-    if (!button) return;
-
-    const itemId = parseInt(button.dataset.id);
-    const img = button.querySelector(".fav-img");
-
-    const index = favorites.indexOf(itemId);
-
-    if (index === -1) {
-        // Add to favorites
-        favorites.push(itemId);
-        img.src = filledHeart;
-        button.title = "Remove from favorites";
-    } else {
-        // Remove from favorites
-        favorites.splice(index, 1);
-        img.src = emptyHeart;
-        button.title = "Add to favorites";
-    }
-
-    console.log("Favorites:", favorites);
-});
 
 

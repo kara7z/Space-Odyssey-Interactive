@@ -77,45 +77,53 @@
                         <img id="box-image" src="IMAGES/export arrow.png" alt=""> </button>
                 </a>
             </div>
-            <div id="Mission-title">
-                <h1>Space Mission</h1>
+            <div class="filter">
+                <h1 id="Mission-title">Space Missions</h1>
+
+                <div class="Nagbar">
+                    <input type="search" placeholder="Search">
+                    <select name="age" id="agencySelect">
+                        <option value="">AGENCY</option>
+                    </select>
+                    <input type="number" id="yearFilter" placeholder="Year (e.g. 1969)" min="1900" max="2100">
+                </div>
             </div>
-            <div class="all-missions">
-                <div id="fist-row" class="fist-row"></div>
-            </div>
+        </div>
+
+        <div class="all-missions">
+            <div id="fist-row" class="fist-row"></div>
+        </div>
 
         </div>
-       <!-- Background overlay -->
-<div class="overlay hidden" id="overlay"></div>
+        <!-- Background overlay -->
+        <div class="overlay hidden" id="overlay"></div>
 
-<!-- Add Mission Popup -->
-<div class="popup hidden" id="addPopup">
-    <h3>Add New Mission</h3>
-    <input type="text" id="newName" placeholder="Mission name">
-    <input type="text" id="newAgency" placeholder="Agency">
-    <input type="text" id="newObjective" placeholder="Objective">
-    <input type="text" id="newDate" placeholder="Launch Date">
-    <input type="text" id="newImage" placeholder="Image URL">
-    <input type="text" id="newDesc" placeholder="Description">
-    <button id="saveMission">Add</button>
-    <button id="cancelAdd">Cancel</button>
-</div>
+        <!-- Add Mission Popup -->
+        <div class="popup hidden" id="addPopup">
+            <h3>Add New Mission</h3>
+            <input type="text" id="newName" placeholder="Mission name">
+            <input type="text" id="newAgency" placeholder="Agency">
+            <input type="text" id="newObjective" placeholder="Objective">
+            <input type="text" id="newDate" placeholder="Launch Date">
+            <input type="text" id="newImage" placeholder="Image URL">
+            <input type="text" id="newDesc" placeholder="Description">
+            <button id="saveMission">Add</button>
+            <button id="cancelAdd">Cancel</button>
+        </div>
 
-<!-- Delete Mission Popup -->
-<div class="popup hidden" id="deletePopup">
-    <h3>Delete Mission</h3>
-    <input type="text" id="deleteName" placeholder="Enter mission name">
-    <button id="confirmDelete">Delete</button>
-    <button id="cancelDelete">Cancel</button>
-</div>
+        <!-- Delete Mission Popup -->
+        <div class="popup hidden" id="deletePopup">
+            <h3>Delete Mission</h3>
+            <input type="text" id="deleteName" placeholder="Enter mission name">
+            <button id="confirmDelete">Delete</button>
+            <button id="cancelDelete">Cancel</button>
+        </div>
 
         <div class="missions-last">
             <p>© 2025 AstroTech Studio 🚀</p>
             <p>Inspiring the Next Generation of Space Explorers</p>
             <p>Made with ❤️ for curious minds</p>
         </div>
-
-
     </main>
 
     <!-- footer -->
