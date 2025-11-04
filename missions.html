@@ -1,56 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Space Odyssey</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Missions - Space Odyssey</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/missions-style.css">
     <link rel="stylesheet" href="CSS/fonts.css">
-
-
 </head>
 
 <body>
     <!-- header -->
     <header>
         <div class="logo">
-            <a href="index.html"><img src="IMAGES/h logo.png" alt=""></a>
-
-
+            <a href="index.html"><img src="IMAGES/h logo.png" alt="Space Odyssey Logo"></a>
         </div>
         <div class="header-content">
             <div class="form">
                 <input type="search" id="Search-bar" placeholder="Search" maxlength="26">
-                <img src="IMAGES/scope.png" alt="">
+                <img src="IMAGES/scope.png" alt="Search icon">
             </div>
-            <div class="language">
-                <span>English</span>
-                <img src="IMAGES/down-arrow.png" alt="">
+            <select name="language" id="language">
+                <option value="English">English</option>
+                <option value="Arabic">Arabic</option>
+                <option value="French">French</option>
+            </select>
+            <div class="fav-container">
+                <button class="fav" id="fav">
+                    <img src="IMAGES/heart-white.png" alt="Favorite icon">
+                    <span id="fav-num">0</span>
+                </button>
+                <div class="fav-popup hidden" id="favPopup">
+                    <div class="fav-popup-header">
+                        <h2>Favorite Missions</h2>
+                        <button class="close-popup" id="closePopup">✕</button>
+                    </div>
+                    <div class="fav-popup-content" id="favPopupContent">
+                        <!-- Favorite missions will be dynamically inserted here -->
+                    </div>
+                </div>
             </div>
-            <img src="IMAGES/notifications.png" alt="">
-
-
-            <img src="IMAGES/profile-avatar.png" alt="">
-            <button class="img-btn hamburger-btn" aria-label="Menu">
-                <img src="IMAGES/hamburger1.png" alt="">
-            </button>
-
-            <div class="menu hidden" id="menu">
-                <ul>
-                    <li id="addMissionBtn">Add Mission</li>
-                    <li id="deleteMissionBtn">Delete Mission</li>
-                    <li id="favoriteMissionBtn">Favorite Missions</li>
-                </ul>
-            </div>
-
+            <img src="IMAGES/profile-avatar.png" alt="User avatar">
         </div>
     </header>
+
     <nav class="navbar">
         <div class="navbarSocial">
             <a href="https://www.instagram.com/nasa/?hl=en" target="_blank"><img src="IMAGES/instagram.png"></a>
             <a href="https://x.com/NASA?p=s" target="_blank"><img src="IMAGES/Twiter.png"></a>
             <a href="index.html"><img src="IMAGES/Be.png"></a>
-
         </div>
         <div class="pagesLinks">
             <ul>
@@ -60,41 +59,54 @@
                 <li><a href="plantes.html">PLANETS</a></li>
                 <li><a href="contact.html" id="button">CONTACT US</a></li>
             </ul>
-            <div>
-
-            </div>
         </div>
     </nav>
+
     <!-- main -->
     <main>
         <div class="Missions-content">
             <div class="boxslide">
                 <h1 class="box-title">Space Missions</h1>
-                <h3 class="box-text">Explore the frontiers of space. </h3>
+                <h3 class="box-text">Explore the frontiers of space.</h3>
                 <h3 class="box-text">Discover lunar craters, Saturn V roars, and zero-gravity dreams like never before!
                 </h3>
-                <a href="#text0box"><button class="box-button">Explore Space
-                        <img id="box-image" src="IMAGES/export arrow.png" alt=""> </button>
+                <a href="#missions-grid"><button class="box-button">Explore Space
+                        <img id="box-image" src="IMAGES/export arrow.png" alt="Arrow"> </button>
                 </a>
             </div>
             <div class="filter">
-                <h1 id="Mission-title">Space Missions</h1>
+                <div class="Mission-title">
+                    <h1 id="Mission-title">Space Missions</h1>
+                    <div class="ham-btn">
+                        <button class="img-btn hamburger-btn" aria-label="Menu">
+                            <img src="IMAGES/hamburger1.png" alt="Menu">
+                        </button>
+                    </div>
+                </div>
+                <div class="menu hidden" id="menu">
+                    <ul>
+                        <li id="addMissionBtn">Add Mission</li>
+                        <li id="deleteMissionBtn">Delete Mission</li>
+                        <li id="favoriteMissionBtn">Favorite Missions</li>
+                    </ul>
+                </div>
 
                 <div class="Nagbar">
                     <input type="search" placeholder="Search">
                     <select name="age" id="agencySelect">
                         <option value="">AGENCY</option>
                     </select>
-                    <input type="number" id="yearFilter" placeholder="Year (e.g. 1969)" min="1900" max="2100">
+                    <input type="number" id="yearFilter" placeholder="Year (e.g. 1969)" min="1960" max="2080">
                 </div>
             </div>
         </div>
 
-        <div class="all-missions">
-            <div id="fist-row" class="fist-row"></div>
+        <div class="all-missions" id="missions-grid">
+            <div id="fist-row" class="fist-row">
+                <!-- Missions will be dynamically inserted here -->
+            </div>
         </div>
 
-        </div>
         <!-- Background overlay -->
         <div class="overlay hidden" id="overlay"></div>
 
@@ -117,6 +129,19 @@
             <input type="text" id="deleteName" placeholder="Enter mission name">
             <button id="confirmDelete">Delete</button>
             <button id="cancelDelete">Cancel</button>
+        </div>
+
+        <!-- EDIT MISSION POPUP -->
+        <div class="popup hidden" id="editPopup">
+            <h3>Edit Mission</h3>
+            <input type="text" id="editName" placeholder="Mission Name">
+            <input type="text" id="editAgency" placeholder="Agency">
+            <input type="text" id="editObjective" placeholder="Objective">
+            <input type="text" id="editDate" placeholder="Launch Date (YYYY/MM/DD)">
+            <input type="text" id="editImage" placeholder="Image URL">
+            <textarea id="editDesc" placeholder="Description"></textarea>
+            <button id="saveEdit">Save</button>
+            <button id="cancelEdit">Cancel</button>
         </div>
 
         <div class="missions-last">
@@ -158,8 +183,6 @@
                     <li class="footer-title" id="Subscribetext">Subscribe</li>
                     <input type="text" id="textholder" placeholder="Email address">
                 </ul>
-
-
             </div>
 
             <div>
@@ -175,7 +198,6 @@
                 <a href="#">Support</a>
             </div>
         </div>
-
     </footer>
 
     <script src="index.js"></script>

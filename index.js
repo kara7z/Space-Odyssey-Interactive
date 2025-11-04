@@ -1,5 +1,5 @@
-let favorites = [];
-let data = [
+var favorites = [];
+var data = [
     {
         "id": 1,
         "name": "Apollo 11",
