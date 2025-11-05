@@ -4,6 +4,7 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
+    font-family: Poppins;
 }
 
 /* header */
@@ -350,6 +351,7 @@ img {
     border: 1px solid black;
     background-color: black;
     color: white;
+    font-family: Poppins;
 }
 
 .popup h2 {
