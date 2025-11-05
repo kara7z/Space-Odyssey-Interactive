@@ -52,6 +52,7 @@ The site features a **consistent header and navigation** across all pages:
 ---
 ## Screenshots
 ![Space Missions Screenshot](Preview/Full-Missions.png)
+![Plannig Trello](Preview/Trello-Plannig.png)
 ---
 ## Main Features (JavaScript)
 
