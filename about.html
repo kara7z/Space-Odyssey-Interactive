@@ -13,22 +13,36 @@
     <!-- header -->
     <header>
         <div class="logo">
-            <a href="index.html"><img src="IMAGES/h logo.png" alt=""></a>
-
+            <a href="index.html"><img src="IMAGES/h logo.png" alt="Space Odyssey Logo"></a>
         </div>
-    <div class="header-content">
-        <div class="form">
+        <div class="header-content">
+            <div class="form">
                 <input type="search" id="Search-bar" placeholder="Search" maxlength="26">
-                <img src="IMAGES/scope.png" alt="">
+                <img src="IMAGES/scope.png" alt="Search icon">
             </div>
-            <div class="language">
-                <span>English</span>
-                <img src="IMAGES/down-arrow.png" alt="">
+            <select name="language" id="language">
+                <option value="English">English</option>
+                <option value="Arabic">Arabic</option>
+                <option value="French">French</option>
+            </select>
+            <div class="fav-container">
+                <button class="fav" id="fav">
+                    <img src="IMAGES/heart-white.png" alt="Favorite icon">
+                    <span id="fav-num">0</span>
+                </button>
+                <div class="fav-popup hidden" id="favPopup">
+                    <div class="fav-popup-header">
+                        <h2>Favorite Missions</h2>
+                        <button class="close-popup" id="closePopup">✕</button>
+                    </div>
+                    <div class="fav-popup-content" id="favPopupContent">
+                    </div>
+                </div>
             </div>
-            <img src="IMAGES/notifications.png" alt="">
-            <img src="IMAGES/profile-avatar.png" alt="">
+            <img src="IMAGES/profile-avatar.png" alt="User avatar">
         </div>
     </header>
+
     <nav class="navbar">
         <div class="navbarSocial">
             <a href="https://www.instagram.com/nasa/?hl=en" target="_blank"><img src="IMAGES/instagram.png"></a>
@@ -56,8 +70,10 @@
                 <h3>Website Objective:</h3>
                 <p>Space Odyssey reveals the wonders of the universe through immersive design and simple, engaging
                     educational content.</p>
-                <a href="index.html"><h4>For more...</h4></a>
-                
+                <a href="index.html">
+                    <h4>For more...</h4>
+                </a>
+
             </div>
             <div class="about-img">
                 <!-- img was added -->

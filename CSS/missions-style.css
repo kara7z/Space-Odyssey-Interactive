@@ -327,14 +327,7 @@ body {
     background-color: rgba(0, 0, 0, 0.573);
 }
 
-.mission-card {
-    margin-bottom: 2rem;
-}
-
-.mission-card[style*="display: none"] {
-    display: none !important;
-}
-
+.add-btn,
 .hamburger-btn {
     background: none;
     border: none;
@@ -379,9 +372,6 @@ body {
     font-weight: bold;
 }
 
-.hidden {
-    display: none !important;
-}
 
 #overlay {
     position: fixed;
@@ -397,42 +387,6 @@ body {
     resize: none;
 }
 
-/* Popup boxes */
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 350px;
-}
-
-.popup input,
-.popup textarea {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: Poppins;
-}
-
-.popup button {
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.popup h2 {
-    margin-bottom: 10px;
-    text-align: center;
-}
 
 .Nagbar {
     background-color: black;
@@ -508,271 +462,63 @@ body {
     font-size: 24px;
 }
 
-.fav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 40px;
-    border-radius: 12px;
-    gap: 6px;
-    background-color: black;
-    cursor: pointer;
-}
-
-.fav img {
-    width: 23px;
-    height: 23px;
-}
-
-.fav span {
-    font-size: 18px;
-    font-family: Poppins;
-    color: white;
-}
-
-.fav:hover {
-    opacity: .8;
-    transform: scale(.95);
-}
-
-.fav:active {
-    opacity: .7;
-    transform: scale(.90);
-}
-
-.fav:focus-visible {
-    outline: 3px solid rgba(0, 123, 255, .5);
-    outline-offset: 2px;
-}
-
-#language {
-    background-color: black;
-    color: white;
-    border: none;
-    font-family: Poppins;
-}
-
-.fav-bar {
-    display: flex;
-    justify-content: end;
-}
-
-.fav-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    max-width: 820px;
-    width: 90vw;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    background-color: white;
-    padding: 12px;
-    border-radius: 12px;
-    border: black 1px solid;
-}
-
-.mini-fav-img {
-    width: 250px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid black;
-}
-
-.main-fav-title {
+/* === DELETE POPUP STYLES (Simplified) === */
+#deletePopup {
+    width: 380px;
     text-align: center;
+}
+
+#deletePopup h3 {
+    margin: 0 0 20px 0;
     font-family: Poppins;
-}
-
-.tex-fav {
-    display: flex;
-    gap: 23px;
-}
-
-.Description-fav,
-.Details-fav {
-    width: 250px;
-    height: 150px;
-    overflow: scroll;
-    padding: 0 18px;
-    font-family: Poppins;
-    border: black 1px solid;
-    background-color: #D9D9D9;
-    border-radius: 12px;
-}
-
-.Description-fav p,
-.Details-fav p {
-    font-size: 12px;
-}
-
-.Description-fav h1,
-.Details-fav h1 {
     font-size: 20px;
+    color: #333;
 }
 
-/* Favorite popup styles - FIXED VERSION */
-.fav-container {
-    position: relative;
-    display: inline-block;
-}
-
-.fav-popup {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 800px;
-    max-height: 600px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    z-index: 10000; /* Increased z-index */
-    margin-top: 10px;
-    overflow: hidden;
-}
-
-.fav-popup-header {
+#deletePopup .popup-buttons {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: black;
-    color: white;
-    border-bottom: 2px solid white;
-}
-
-.fav-popup-header h2 {
-    margin: 0;
-    font-family: Poppins;
-    font-size: 24px;
-}
-
-.close-popup {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
+    gap: 12px;
     justify-content: center;
-    border-radius: 50%;
+    margin-top: 10px;
+    
 }
 
-.close-popup:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.fav-popup-content {
-    max-height: 500px;
-    overflow-y: auto;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Custom scrollbar for popup */
-.fav-popup-content::-webkit-scrollbar {
-    width: 8px;
-}
-
-.fav-popup-content::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.fav-popup-content::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-}
-
-.fav-popup-content::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* Favorite mission item in popup */
-.fav-popup-item {
-    display: flex;
-    gap: 15px;
-    padding: 15px;
-    border: 1px solid #ddd;
+#confirmDelete {
+    background-color: #d33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
     border-radius: 8px;
-    background-color: #f9f9f9;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.fav-popup-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.fav-popup-item-img {
-    width: 120px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.fav-popup-item-content {
-    flex: 1;
-}
-
-.fav-popup-item-title {
-    margin: 0 0 8px 0;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border: black 1px solid;
+}
+
+#confirmDelete:hover {
+    background-color: #b00;
+}
+
+#cancelDelete {
+    background-color: white;
     color: #333;
-}
-
-.fav-popup-item-details {
-    margin: 0;
-    font-family: Poppins-Light;
-    font-size: 14px;
-    color: #666;
-}
-
-.fav-popup-item-details strong {
-    color: #333;
-}
-
-.no-favorites {
-    text-align: center;
-    padding: 30px;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 8px;
     font-family: Poppins;
-    color: #666;
-    font-style: italic;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: black 1px solid;
+
 }
 
-/* Ensure header has proper stacking context */
-/* header {
-    position: relative;
-    z-index: 1000;
-} */
-
-/* Make sure the popup appears above everything */
-.fav-popup {
-    z-index: 10000;
+#cancelDelete:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
 }
-
-/* If the popup is getting cut off by header overflow */
-header {
-    overflow: visible;
-}
-
-.header-content {
-    overflow: visible;
-}
-
-.fav-container {
-    overflow: visible;
-}
-
-header, .header-content, .fav-container {
-    overflow: visible !important;
+#addPopup{
+    font-family: Poppins;
+    border: black solid 1px;
 }
