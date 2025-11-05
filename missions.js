@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>`;
         });
     }
-    // === MAIN CLICK HANDLER (Edit, Favorite, Delete) ===
+    // === (Edit, Favorite, Delete) ===
     const container = document.getElementById('fist-row');
     container.addEventListener('click', e => {
         const target = e.target;
@@ -350,7 +350,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
     });
-    // === INITIALIZE ===
     populateAgencySelect();
     renderMissions(data);
     updateFavoriteCount();
